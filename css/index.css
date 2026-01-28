@@ -75,5 +75,53 @@ h1{
 #connect a:hover {
   background-color: #1e40af;
 }
+/* Navigation */
+nav {
+  position: sticky;
+  top: 0;
+  background-color: white;
+  border-bottom: 1px solid #ddd;
+  padding: 10px 0;
+}
+
+.nav-list {
+  display: flex;
+  justify-content: center;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+  margin: 0;
+}
+
+.nav-list a {
+  text-decoration: none;
+  font-weight: bold;
+  color: #333;
+}
+
+/* Experience Flexbox */
+#experience ul {
+  list-style: none;
+  padding: 0;
+}
+
+#experience li {
+  margin-bottom: 20px;
+}
+
+.job-header {
+  display: flex;
+  justify-content: space-between;
+  font-weight: bold;
+}
+
+/* Connect Flexbox */
+#connect ul {
+  display: flex;
+  gap: 20px;
+  list-style: none;
+  padding: 0;
+}
+
 
  
