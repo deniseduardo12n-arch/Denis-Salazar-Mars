@@ -1,4 +1,4 @@
-    <!DOCTYPE html>
+ <!DOCTYPE html>
 <html lang="en">
 <head>   
     <meta charset="UTF-8">
@@ -17,106 +17,41 @@
             <li><a href="#skills">Skills</a></li>
             <li><a href="#projects">Projects</a></li>
             <li><a href="#connect">Connect</a></li>
+            <li><a href="#leave-message">Leave a Message</a></li>
         </ul>
     </nav>
 
     <h1>Denis Salazar</h1>
 
     <!-- About Section -->
-   <section>
-  <h2 id="about">About</h2>
-  <p>
-    I am a Mechanical Engineering graduate from California State University, Fullerton (BS, May 2025),
-    passionate about design and efficient manufacturing.
-  </p>
-
-  <p>
-    My engineering foundation includes 2 years of practical experience gained through the Formula and
-    Baja SAE collegiate design series, where I experienced the full product lifecycle from concept to
-    assembly.
-  </p>
-
-  <h3>Key Expertise</h3>
-  <ul>
-    <li>
-      <strong>Baja SAE Senior Project:</strong> Served as Vehicle Dynamics Lead and Suspension Design Engineer,
-      specializing in Design for Manufacture (DFM) and system integration.
-    </li>
-    <li>
-      <strong>Technical Skills:</strong> CAD, FEA, CAM, and Data Analysis.
-    </li>
-    <li>
-      <strong>Core Skills:</strong> Suspension Design, Collaborative Problem Solving,
-      Hands-on Manufacturing, and Assembly.
-    </li>
-  </ul>
-</section>
-
-
-    <!-- Experience Section -->
-     <section>
-  <h2 id="experience">Experience</h2>
-  <ul>
-    <li>
-      <div class="job-header">
-        <span>CSUF Titan Racing Baja SAE</span>
-        <span>June 2024 – June 2025</span>
-      </div>
-
-      <p><strong>Suspension Design Engineer</strong></p>
-      <ul>
-        <li>
-          Designed Baja car uprights in SolidWorks, achieving a 46% reduction in turning radius over past designs,
-          improving maneuverability and steering response.
-        </li>
-        <li>
-          Performed FEA to validate uprights with a factor of safety greater than 3, reducing weight by 44% while
-          improving dynamic load performance.
-        </li>
-        <li>
-          Created detailed manufacturing drawings in SolidWorks to ensure part accuracy, ease of fabrication,
-          and alignment with design requirements.
-        </li>
-        <li>
-          Programmed and machined Baja uprights on a 3-axis CNC using Fusion 360, optimizing manufacturing efficiency
-          and dimensional accuracy.
-        </li>
-      </ul>
-
-      <p><strong>Vehicle Dynamics Lead</strong></p>
-      <ul>
-        <li>
-          Calculated Ackermann steering angles for inner and outer wheels, achieving a turning radius under 10 ft,
-          guiding front suspension design decisions.
-        </li>
-        <li>
-          Calculated lateral, vertical, and longitudinal forces during cornering to support suspension optimization
-          and ensure components withstand real-world loads.
-        </li>
-        <li>
-          Calculated the vehicle center of gravity (CG) to support steering and braking system design.
-        </li>
-      </ul>
-    </li>
-  </ul>
-</section>
-
-    <!-- Skills Section -->
-    <section>
-        <h2 id="skills">Skills</h2>
+    <section id="about">
+        <h2>About</h2>
+        <p>Mechanical Engineering graduate passionate about design and efficient manufacturing.</p>
     </section>
 
-    <!-- Projects Section -->
-    <section>
-        <h2 id="projects">Projects</h2>
+    <!-- Experience Section -->
+    <section id="experience">
+        <h2>Experience</h2>
         <ul>
-            <!-- Projects will be added here later using JavaScript -->
+            <li>Suspension Design Engineer – CSUF Titan Racing Baja SAE</li>
         </ul>
     </section>
 
+    <!-- Skills Section -->
+    <section id="skills">
+        <h2>Skills</h2>
+        <ul></ul>
+    </section>
+
+    <!-- Projects Section -->
+    <section id="projects">
+        <h2>Projects</h2>
+        <ul></ul>
+    </section>
+
     <!-- Connect Section -->
-    <section>
-        <h2 id="connect">Connect</h2>
+    <section id="connect">
+        <h2>Connect</h2>
         <ul>
             <li>
                 <a href="https://github.com/deniseduardo12n-arch" target="_blank">GitHub</a>
@@ -127,5 +62,39 @@
         </ul>
     </section>
 
+    <!-- Leave a Message Section -->
+    <section id="leave-message">
+        <h2>Leave a Message</h2>
+
+        <form name="leave_message">
+
+            <label for="usersName">Name:</label><br>
+            <input type="text" id="usersName" name="usersName" required><br><br>
+
+            <label for="usersEmail">Email:</label><br>
+            <input type="email" id="usersEmail" name="usersEmail" required><br><br>
+
+            <label for="usersMessage">Message:</label><br>
+            <textarea id="usersMessage" name="usersMessage" required></textarea><br><br>
+
+            <button type="submit">Submit</button>
+
+        </form>
+    </section>
+
+    <!-- Messages Section -->
+    <section id="messages">
+        <h2>Messages</h2>
+        <ul></ul>
+    </section>
+
+    <!-- Footer -->
+    <footer></footer>
+
+    <!-- JavaScript -->
+    <script src="js/index.js"></script>
+
 </body>
 </html>
+
+

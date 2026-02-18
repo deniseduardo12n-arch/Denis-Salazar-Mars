@@ -122,6 +122,109 @@ nav {
   list-style: none;
   padding: 0;
 }
+/* Message Form Styling */
+
+#leave-message form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+/* Labels */
+#leave-message label {
+  font-weight: 600;
+  margin-bottom: 4px;
+}
+
+/* Inputs & Textarea */
+#leave-message input,
+#leave-message textarea {
+  padding: 10px;
+  font-size: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+/* Textarea size */
+#leave-message textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+/* Submit Button */
+#leave-message button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 10px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#leave-message button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* Messages Section*/
+
+#messages ul {
+  list-style: none;
+  padding: 0;
+}
+
+#messages li {
+  background-color: #eff6ff;
+  padding: 10px;
+  margin-top: 10px;
+  border-radius: 6px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#messages button {
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 5px 10px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#messages button:hover {
+  background-color: #b91c1c;
+}
+
+/* Mobile Optimization */
+
+@media (max-width: 600px) {
+  section {
+    margin: 15px;
+  }
+
+  #leave-message input,
+  #leave-message textarea,
+  #leave-message button {
+    font-size: 18px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    gap: 10px;
+  }
+
+  .job-header {
+    flex-direction: column;
+    gap: 5px;
+  }
+}
+
 
 
  
