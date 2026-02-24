@@ -1,12 +1,13 @@
- <!DOCTYPE html>
+<!DOCTYPE html>
 <html lang="en">
-<head>   
+<head>
     <meta charset="UTF-8">
     <meta name="description" content="Personal portfolio website for lesson 7" />
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Denis Salazar's Portfolio</title>  
+    <title>Denis Salazar's Portfolio</title>
     <link rel="stylesheet" href="css/index.css">
 </head>
+
 <body>
 
     <!-- Navigation -->
@@ -26,14 +27,55 @@
     <!-- About Section -->
     <section id="about">
         <h2>About</h2>
-        <p>Mechanical Engineering graduate passionate about design and efficient manufacturing.</p>
+        <p>
+            I am a Mechanical Engineering graduate from California State University, Fullerton (BS, May 2025),
+            passionate about design and efficient manufacturing.
+        </p>
+        <p>
+            My engineering foundation includes 2 years of practical experience gained through the Formula and
+            Baja SAE collegiate design series, where I experienced the full product lifecycle from concept to assembly.
+        </p>
+
+        <h3>Key Expertise</h3>
+        <ul>
+            <li>
+                <strong>Baja SAE Senior Project:</strong> Vehicle Dynamics Lead and Suspension Design Engineer.
+            </li>
+            <li>
+                <strong>Technical Skills:</strong> CAD, FEA, CAM, Data Analysis.
+            </li>
+            <li>
+                <strong>Core Skills:</strong> Suspension Design, Collaborative Problem Solving,
+                Hands-on Manufacturing, Assembly.
+            </li>
+        </ul>
     </section>
 
     <!-- Experience Section -->
     <section id="experience">
         <h2>Experience</h2>
         <ul>
-            <li>Suspension Design Engineer – CSUF Titan Racing Baja SAE</li>
+            <li>
+                <div class="job-header">
+                    <span>CSUF Titan Racing Baja SAE</span>
+                    <span>June 2024 – June 2025</span>
+                </div>
+
+                <p><strong>Suspension Design Engineer</strong></p>
+                <ul>
+                    <li>Designed Baja car uprights in SolidWorks.</li>
+                    <li>Performed FEA validation.</li>
+                    <li>Created manufacturing drawings.</li>
+                    <li>Programmed and machined uprights using Fusion 360.</li>
+                </ul>
+
+                <p><strong>Vehicle Dynamics Lead</strong></p>
+                <ul>
+                    <li>Calculated Ackermann steering angles.</li>
+                    <li>Analyzed vehicle forces during cornering.</li>
+                    <li>Calculated center of gravity (CG).</li>
+                </ul>
+            </li>
         </ul>
     </section>
 
@@ -46,7 +88,9 @@
     <!-- Projects Section -->
     <section id="projects">
         <h2>Projects</h2>
-        <ul></ul>
+        <ul>
+            <!-- Future JavaScript projects go here -->
+        </ul>
     </section>
 
     <!-- Connect Section -->
@@ -69,16 +113,15 @@
         <form name="leave_message">
 
             <label for="usersName">Name:</label><br>
-            <input type="text" id="usersName" name="usersName" required><br><br>
+            <input type="text" name="usersName" required><br><br>
 
             <label for="usersEmail">Email:</label><br>
-            <input type="email" id="usersEmail" name="usersEmail" required><br><br>
+            <input type="email" name="usersEmail" required><br><br>
 
             <label for="usersMessage">Message:</label><br>
-            <textarea id="usersMessage" name="usersMessage" required></textarea><br><br>
+            <textarea name="usersMessage" required></textarea><br><br>
 
             <button type="submit">Submit</button>
-
         </form>
     </section>
 
@@ -96,5 +139,3 @@
 
 </body>
 </html>
-
-
