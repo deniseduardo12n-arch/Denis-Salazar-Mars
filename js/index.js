@@ -25,30 +25,30 @@ footer.appendChild(copyright);
 // Skills Section
 // =============================
 
-// Array of skills
-let skills = [
+const skills = [
   "SolidWorks",
-  "FEA",
   "Fusion 360",
-  "CNC Machining",
-  "HTML",
-  "CSS",
-  "JavaScript",
-  "Git & GitHub"
+  "FEA Analysis",
+  "CAD Modeling",
+  "CAM Programming",
+  "Data Analysis",
+  "Suspension Design",
+  "Vehicle Dynamics",
+  "Manufacturing Drawings"
 ];
 
 // Select skills section
-let skillsSection = document.getElementById("skills");
+const skillsSection = document.querySelector("#skills");
 
 // Select ul inside skills section
-let skillsList = skillsSection.querySelector("ul");
+const skillsList = skillsSection.querySelector("ul");
 
 // Loop through skills and add to page
-for (let i = 0; i < skills.length; i++) {
-  let skill = document.createElement("li");
-  skill.innerText = skills[i];
+skills.forEach(function (skillText) {
+  const skill = document.createElement("li");
+  skill.innerText = skillText;
   skillsList.appendChild(skill);
-}
+});
 
 
 // =============================
@@ -90,8 +90,7 @@ messageForm.addEventListener("submit", function (event) {
 
   // Remove message when clicked
   removeButton.addEventListener("click", function () {
-    const entry = removeButton.parentNode;
-    entry.remove();
+    newMessage.remove();
   });
 
   // Append button to message
