@@ -1,81 +1,88 @@
+ /* ============================= */
 /* Global Page Styles */
-body{
-background-color: #f2f6fa;
-color: #333333;
-font-family: 'Arial', sans-serif;
-margin: 0;
-padding:0;
-}
+/* ============================= */
 
-/* Name/Header */
-h1{
-    text-align: center;
-    font-size: 3rem ;
-    font-weight: 700;
-    color: #1e3a8a;
-    margin-top: 30px;
-    letter-spacing: 2px;
-}
- 
- /* Section Styling */
- section{
-    background-color: #ffffff;
-    padding: 20px;
-    margin: 20px auto;
-    max-width: 800px;
-    border-radius:10px;
-    border: 2px solid #dbeafe;
- }
-
- /* Headings */
- h2{
-    font-size: 1.8rem;
-    font-weight: 600;
-    color:#2563eb;
-    border-bottom:2px solid #93c5fd;
-    padding-bottom: 5px;
- }
-
- 
- /* About Section */
- #about {
-  text-align: center;                
-}
-
-
- /* Experience List */
- #experience ul {
-  list-style: none;
+body {
+  background-color: #f2f6fa;
+  color: #333333;
+  font-family: Arial, sans-serif;
+  margin: 0;
   padding: 0;
 }
-#experience li {
-  background-color: #eff6ff;          
-  margin: 10px 0;
-  padding: 15px;
-  border-left: 5px solid #2563eb;
-  border-radius: 6px;
-  font-weight: 500;
+
+/* ============================= */
+/* Header */
+/* ============================= */
+
+h1 {
+  text-align: center;
+  font-size: 2rem; /* mobile-first */
+  font-weight: 700;
+  color: #1e3a8a;
+  margin-top: 30px;
+  letter-spacing: 2px;
 }
 
+/* ============================= */
+/* Section Styling */
+/* ============================= */
 
- 
-
- /* Contact Links */
- #connect a {
-  text-decoration: none;
-  color: white;
-  background-color: #2563eb;
-  padding: 10px 15px;
-  margin-right: 10px;
-  border-radius: 6px;
-  display: inline-block;
-  transition: background-color 0.3s ease;
+section {
+  background-color: #ffffff;
+  padding: 25px;
+  margin: 20px 15px;
+  max-width: 800px;
+  border-radius: 10px;
+  border: 2px solid #dbeafe;
 }
 
-#connect a:hover {
-  background-color: #1e40af;
+/* ============================= */
+/* Headings */
+/* ============================= */
+
+h2 {
+  font-size: 1.5rem;
+  font-weight: 600;
+  color: #2563eb;
+  border-bottom: 2px solid #93c5fd;
+  padding-bottom: 5px;
+  text-align: center;
 }
+
+/* ============================= */
+/* About Section */
+/* ============================= */
+
+#about {
+  text-align: center;
+}
+
+#about p {
+  margin-bottom: 15px;
+  line-height: 1.6;
+}
+
+#about h3 {
+  margin-top: 20px;
+  color: #1e3a8a;
+}
+
+.expertise-list {
+  list-style: disc;
+  text-align: left;
+  margin: 15px auto 0;
+  max-width: 600px;
+  padding-left: 20px;
+}
+
+.expertise-list li {
+  margin-bottom: 10px;
+}
+
+/* ============================= */
 /* Navigation */
+/* ============================= */
+
 nav {
   position: sticky;
   top: 0;
@@ -99,14 +106,22 @@ nav {
   color: #333;
 }
 
-/* Experience Flexbox */
+/* ============================= */
+/* Experience Section */
+/* ============================= */
+
 #experience ul {
   list-style: none;
   padding: 0;
 }
 
 #experience li {
-  margin-bottom: 20px;
+  background-color: #eff6ff;
+  margin: 10px 0;
+  padding: 15px;
+  border-left: 5px solid #2563eb;
+  border-radius: 6px;
+  font-weight: 500;
 }
 
 .job-header {
@@ -115,13 +130,161 @@ nav {
   font-weight: bold;
 }
 
-/* Connect Flexbox */
+/* ============================= */
+/* Connect Section */
+/* ============================= */
+
 #connect ul {
   display: flex;
   gap: 20px;
   list-style: none;
   padding: 0;
 }
+
+#connect a {
+  text-decoration: none;
+  color: white;
+  background-color: #2563eb;
+  padding: 10px 15px;
+  border-radius: 6px;
+  display: inline-block;
+  transition: background-color 0.3s ease;
+}
+
+#connect a:hover {
+  background-color: #1e40af;
+}
+
+/* ============================= */
+/* Leave a Message Form */
+/* ============================= */
+
+#leave-message form {
+  display: flex;
+  flex-direction: column;
+  gap: 12px;
+  margin-top: 15px;
+}
+
+#leave-message label {
+  font-weight: 600;
+}
+
+#leave-message input,
+#leave-message textarea {
+  padding: 12px;
+  font-size: 16px;
+  border: 1px solid #cbd5e1;
+  border-radius: 6px;
+  width: 100%;
+  box-sizing: border-box;
+}
+
+#leave-message textarea {
+  min-height: 100px;
+  resize: vertical;
+}
+
+#leave-message button {
+  background-color: #2563eb;
+  color: white;
+  border: none;
+  padding: 12px;
+  font-size: 16px;
+  border-radius: 6px;
+  cursor: pointer;
+  transition: background-color 0.3s ease, transform 0.1s ease;
+}
+
+#leave-message button:hover {
+  background-color: #1e40af;
+  transform: translateY(-2px);
+}
+
+/* ============================= */
+/* Messages Section */
+/* ============================= */
+
+#messages ul {
+  list-style: none;
+  padding: 0;
+}
+
+#messages li {
+  background-color: #eff6ff;
+  padding: 12px;
+  margin-top: 10px;
+  border-radius: 6px;
+  display: flex;
+  flex-direction: column;
+  gap: 8px;
+}
+
+#messages button {
+  align-self: flex-start;
+  background-color: #ef4444;
+  color: white;
+  border: none;
+  padding: 6px 12px;
+  border-radius: 4px;
+  cursor: pointer;
+}
+
+#messages button:hover {
+  background-color: #b91c1c;
+}
+
+/* ============================= */
+/* Mobile Optimization */
+/* ============================= */
+
+@media (max-width: 600px) {
+
+  section {
+    margin: 15px;
+  }
+
+  .nav-list {
+    flex-direction: column;
+    align-items: center;
+    gap: 10px;
+  }
+
+  .job-header {
+    flex-direction: column;
+    gap: 5px;
+  }
+
+  #leave-message input,
+  #leave-message textarea,
+  #leave-message button {
+    font-size: 18px;
+  }
+
+  #leave-message button {
+    width: 100%;
+  }
+}
+
+/* ============================= */
+/* Larger Screens */
+/* ============================= */
+
+@media (min-width: 768px) {
+
+  section {
+    margin: 20px auto;
+  }
+
+  h1 {
+    font-size: 3rem;
+  }
+
+  h2 {
+    font-size: 1.8rem;
+  }
+}
+
 
 
  
