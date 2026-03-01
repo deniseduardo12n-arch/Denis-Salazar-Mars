@@ -123,5 +123,31 @@ nav {
   padding: 0;
 }
 
+  /* Projects Section (Flexbox)*/
+
+#projects ul {
+  display: flex;
+  flex-wrap: wrap;
+  gap: 15px;
+  list-style: none;
+  padding: 0;
+}
+
+#projects li {
+  background-color: #eff6ff;
+  border: 2px solid #93c5fd;
+  padding: 12px 18px;
+  border-radius: 8px;
+  min-width: 150px;
+  text-align: center;
+  font-weight: 500;
+  transition: transform 0.2s ease, box-shadow 0.2s ease;
+}
+
+#projects li:hover {
+  transform: translateY(-3px);
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+}
+
 
  
