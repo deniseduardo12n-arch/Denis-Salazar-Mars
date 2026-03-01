@@ -150,4 +150,51 @@ nav {
 }
 
 
- 
+ /* TABLET STYLES */
+@media (min-width: 600px) {
+
+  h1 {
+    font-size: 3.5rem;
+    color: #1d4ed8;
+  }
+
+  section {
+    padding: 30px;
+    max-width: 900px;
+  }
+
+  #experience li {
+    padding: 20px;
+    background-color: #dbeafe;
+  }
+}
+
+/* DESKTOP STYLES */
+@media (min-width: 1000px) {
+
+  body {
+    font-size: 1.1rem;
+    background-color: #e5e7eb;
+  }
+
+  h1 {
+    text-align: left;
+    margin-left: 40px;
+  }
+
+  section {
+    margin: 40px auto;
+    border-width: 3px;
+  }
+}
+
+/* EXPERIENCE GRID FOR DESKTOP */
+@media (min-width: 1000px) {
+
+  #experience ul {
+    display: grid;
+    grid-template-columns: repeat(2, 1fr);
+    gap: 30px;
+  }
+}
+
