@@ -1,6 +1,4 @@
- // =============================
-// Footer Section
-// =============================
+ // Footer
 
 let today = new Date();
 let thisYear = today.getFullYear();
@@ -13,138 +11,110 @@ copyright.innerHTML = "Denis Salazar © " + thisYear;
 footer.appendChild(copyright);
 
 
-// =============================
-// Skills Section
-// =============================
+// Skills
 
 const skills = [
-  "SolidWorks",
-  "Fusion 360",
-  "FEA Analysis",
-  "CAD Modeling",
-  "CAM Programming",
-  "Data Analysis",
-  "Suspension Design",
-  "Vehicle Dynamics",
-  "Manufacturing Drawings"
+"SolidWorks",
+"Fusion 360",
+"FEA Analysis",
+"CAD Modeling",
+"CAM Programming",
+"Data Analysis",
+"Suspension Design",
+"Vehicle Dynamics",
+"Manufacturing Drawings"
 ];
 
 const skillsSection = document.querySelector("#skills");
 const skillsList = skillsSection.querySelector("ul");
 
 skills.forEach(function (skillText) {
-  const skill = document.createElement("li");
-  skill.innerText = skillText;
-  skillsList.appendChild(skill);
+
+const skill = document.createElement("li");
+
+skill.innerText = skillText;
+
+skillsList.appendChild(skill);
+
 });
 
 
-// =============================
-// Message Form Section
-// =============================
+// Message Form
 
 const messageForm = document.querySelector('form[name="leave_message"]');
 
 messageForm.addEventListener("submit", function (event) {
 
-  event.preventDefault();
+event.preventDefault();
 
-  const usersName = event.target.usersName.value;
-  const usersEmail = event.target.usersEmail.value;
-  const usersMessage = event.target.usersMessage.value;
+const usersName = event.target.usersName.value;
+const usersEmail = event.target.usersEmail.value;
+const usersMessage = event.target.usersMessage.value;
 
-  const messageSection = document.querySelector("#messages");
-  const messageList = messageSection.querySelector("ul");
+const messageSection = document.querySelector("#messages");
+const messageList = messageSection.querySelector("ul");
 
-  const newMessage = document.createElement("li");
+const newMessage = document.createElement("li");
 
-  newMessage.innerHTML = `
-    <a href="mailto:${usersEmail}">${usersName}</a>
-    <span> wrote: ${usersMessage} </span>
-  `;
+newMessage.innerHTML = `
+<a href="mailto:${usersEmail}">${usersName}</a>
+<span> wrote: ${usersMessage} </span>
+`;
 
-  const removeButton = document.createElement("button");
-  removeButton.innerText = "remove";
-  removeButton.type = "button";
+const removeButton = document.createElement("button");
 
-  removeButton.addEventListener("click", function () {
-    newMessage.remove();
-  });
+removeButton.innerText = "remove";
+removeButton.type = "button";
 
-  newMessage.appendChild(removeButton);
-  messageList.appendChild(newMessage);
+removeButton.addEventListener("click", function () {
+newMessage.remove();
+});
 
-  messageForm.reset();
+newMessage.appendChild(removeButton);
+
+messageList.appendChild(newMessage);
+
+messageForm.reset();
+
 });
 
 
-// =============================
-// Open-Meteo Weather API
-// =============================
-
-const weatherButton = document.getElementById("getWeather");
-
-if (weatherButton) {
-
-  weatherButton.addEventListener("click", function () {
-
-    let latitude = 34.0336;
-    let longitude = -117.0431;
-
-    let url = `https://api.open-meteo.com/v1/forecast?latitude=${latitude}&longitude=${longitude}&current_weather=true`;
-
-    fetch(url)
-      .then(response => response.json())
-      .then(data => {
-
-        let temperature = data.current_weather.temperature;
-        let windSpeed = data.current_weather.windspeed;
-
-        document.getElementById("temperature").textContent =
-          "Temperature: " + temperature + "°C";
-
-        document.getElementById("wind").textContent =
-          "Wind Speed: " + windSpeed + " km/h";
-
-      })
-      .catch(error => {
-        console.error("Error fetching weather:", error);
-      });
-
-  });
-
-}
-
-
-// =============================
-// GitHub Repositories Fetch
-// =============================
+// GitHub Projects
 
 fetch("https://api.github.com/users/deniseduardo12n-arch/repos")
 
-  .then(response => response.json())
+.then(response => response.json())
 
-  .then(data => {
+.then(data => {
 
-    let repositories = data;
-    console.log(repositories);
+let repositories = data;
 
-    let projectSection = document.getElementById("projects");
-    let projectList = projectSection.querySelector("ul");
+let projectSection = document.getElementById("projects");
 
-    // Clear existing list items
-    projectList.innerHTML = "";
+let projectList = projectSection.querySelector("ul");
 
-    for (let i = 0; i < repositories.length; i++) {
+projectList.innerHTML = "";
 
-      let project = document.createElement("li");
-      project.innerText = repositories[i].name;
+for (let i = 0; i < repositories.length; i++) {
 
-      projectList.appendChild(project);
-    }
+let project = document.createElement("li");
 
-  })
+let link = document.createElement("a");
 
-  .catch(error => {
-    console.error("Error fetching repositories:", error);
-  });
+link.href = repositories[i].html_url;
+
+link.innerText = repositories[i].name;
+
+link.target = "_blank";
+
+project.appendChild(link);
+
+projectList.appendChild(project);
+
+}
+
+})
+
+.catch(error => {
+console.error("Error fetching repositories:", error);
+});
