@@ -1,95 +1,34 @@
- /* Global Page Styles */
-
-body{
+ body {
 background-color:#f2f6fa;
-color:#333333;
-font-family:Arial, sans-serif;
+font-family:Arial;
 margin:0;
-padding:0;
 }
-
-/* Name/Header */
 
 h1{
 text-align:center;
-font-size:3rem;
-font-weight:700;
 color:#1e3a8a;
 margin-top:30px;
-letter-spacing:2px;
 }
 
-/* Section Styling */
-
 section{
-background-color:#ffffff;
-padding:20px;
-margin:20px auto;
+background:white;
 max-width:800px;
+margin:20px auto;
+padding:20px;
 border-radius:10px;
 border:2px solid #dbeafe;
 }
 
-/* Headings */
-
 h2{
-font-size:1.8rem;
-font-weight:600;
 color:#2563eb;
 border-bottom:2px solid #93c5fd;
-padding-bottom:5px;
 }
-
-/* About Section */
-
-#about{
-text-align:center;
-}
-
-/* Profile Photo */
-
-.profile-photo{
-width:200px;
-height:200px;
-object-fit:cover;
-border-radius:50%;
-display:block;
-margin:20px auto;
-border:4px solid #2563eb;
-}
-
-/* Experience List */
-
-#experience ul{
-list-style:none;
-padding:0;
-}
-
-#experience li{
-background-color:#eff6ff;
-margin:10px 0;
-padding:15px;
-border-left:5px solid #2563eb;
-border-radius:6px;
-font-weight:500;
-}
-
-/* Experience Header */
-
-.job-header{
-display:flex;
-justify-content:space-between;
-font-weight:bold;
-}
-
-/* Navigation */
 
 nav{
 position:sticky;
 top:0;
-background-color:white;
-border-bottom:1px solid #ddd;
-padding:10px 0;
+background:white;
+padding:10px;
 }
 
 .nav-list{
@@ -98,7 +37,6 @@ justify-content:center;
 gap:20px;
 list-style:none;
 padding:0;
-margin:0;
 }
 
 .nav-list a{
@@ -107,26 +45,29 @@ font-weight:bold;
 color:#333;
 }
 
-.nav-list a:hover{
-color:#2563eb;
+.profile-photo{
+width:200px;
+height:200px;
+border-radius:50%;
+display:block;
+margin:20px auto;
+object-fit:cover;
+border:4px solid #2563eb;
 }
 
-/* Skills Section */
-
 #skills ul{
+display:flex;
+flex-wrap:wrap;
+gap:10px;
 list-style:none;
 padding:0;
 }
 
 #skills li{
-background-color:#eff6ff;
-margin:8px 0;
-padding:10px;
-border-left:4px solid #2563eb;
-border-radius:5px;
+background:#eff6ff;
+padding:8px 12px;
+border-radius:6px;
 }
-
-/* Projects Section */
 
 #projects ul{
 display:flex;
@@ -137,27 +78,17 @@ padding:0;
 }
 
 #projects li{
-background-color:#eff6ff;
+background:#eff6ff;
 border:2px solid #93c5fd;
 padding:12px 18px;
 border-radius:8px;
-min-width:150px;
-text-align:center;
-font-weight:500;
-transition:transform 0.2s ease, box-shadow 0.2s ease;
-}
-
-#projects li:hover{
-transform:translateY(-3px);
-box-shadow:0 4px 8px rgba(0,0,0,0.1);
 }
 
 #projects a{
 text-decoration:none;
+font-weight:bold;
 color:#1e3a8a;
 }
-
-/* Connect Section */
 
 #connect ul{
 display:flex;
@@ -167,65 +98,15 @@ padding:0;
 }
 
 #connect a{
+background:#2563eb;
+color:white;
+padding:10px 15px;
+border-radius:6px;
 text-decoration:none;
-color:white;
-background-color:#2563eb;
-padding:10px 15px;
-border-radius:6px;
-display:inline-block;
-transition:background-color 0.3s ease;
 }
-
-#connect a:hover{
-background-color:#1e40af;
-}
-
-/* Message Form */
-
-form input,
-form textarea{
-width:100%;
-padding:8px;
-margin-top:5px;
-border:1px solid #ccc;
-border-radius:5px;
-}
-
-form button{
-background-color:#2563eb;
-color:white;
-border:none;
-padding:10px 15px;
-border-radius:6px;
-cursor:pointer;
-}
-
-form button:hover{
-background-color:#1e40af;
-}
-
-/* Messages */
-
-#messages ul{
-list-style:none;
-padding:0;
-}
-
-#messages li{
-background-color:#eff6ff;
-padding:10px;
-margin-top:10px;
-border-radius:6px;
-}
-
-/* Footer */
 
 footer{
 text-align:center;
 padding:20px;
-margin-top:20px;
-background-color:#e5e7eb;
-font-weight:bold;
 }
-
  

@@ -6,7 +6,7 @@ let thisYear = today.getFullYear();
 let footer = document.querySelector("footer");
 
 let copyright = document.createElement("p");
-copyright.innerHTML = "Denis Salazar © " + thisYear;
+copyright.innerHTML = "© Denis Salazar " + thisYear;
 
 footer.appendChild(copyright);
 
@@ -28,93 +28,93 @@ const skills = [
 const skillsSection = document.querySelector("#skills");
 const skillsList = skillsSection.querySelector("ul");
 
-skills.forEach(function (skillText) {
+skills.forEach(function(skill){
 
-const skill = document.createElement("li");
+let li = document.createElement("li");
+li.innerText = skill;
 
-skill.innerText = skillText;
-
-skillsList.appendChild(skill);
+skillsList.appendChild(li);
 
 });
 
 
 // Message Form
 
-const messageForm = document.querySelector('form[name="leave_message"]');
+const form = document.querySelector('form[name="leave_message"]');
 
-messageForm.addEventListener("submit", function (event) {
+form.addEventListener("submit", function(event){
 
 event.preventDefault();
 
-const usersName = event.target.usersName.value;
-const usersEmail = event.target.usersEmail.value;
-const usersMessage = event.target.usersMessage.value;
+let name = event.target.usersName.value;
+let email = event.target.usersEmail.value;
+let message = event.target.usersMessage.value;
 
-const messageSection = document.querySelector("#messages");
-const messageList = messageSection.querySelector("ul");
+let messageSection = document.querySelector("#messages");
+let messageList = messageSection.querySelector("ul");
 
-const newMessage = document.createElement("li");
+let newMessage = document.createElement("li");
 
-newMessage.innerHTML = `
-<a href="mailto:${usersEmail}">${usersName}</a>
-<span> wrote: ${usersMessage} </span>
-`;
+newMessage.innerHTML =
+`<a href="mailto:${email}">${name}</a> wrote: ${message}`;
 
-const removeButton = document.createElement("button");
+let removeButton = document.createElement("button");
 
-removeButton.innerText = "remove";
+removeButton.innerText = "Remove";
 removeButton.type = "button";
 
-removeButton.addEventListener("click", function () {
+removeButton.addEventListener("click", function(){
+
 newMessage.remove();
+
 });
 
 newMessage.appendChild(removeButton);
 
 messageList.appendChild(newMessage);
 
-messageForm.reset();
+form.reset();
 
 });
 
 
+// Projects
+
+let projectSection = document.querySelector("#projects ul");
+
+let project1 = document.createElement("li");
+project1.innerHTML = `<a href="https://sites.google.com/d/1m6Mm_tC_qsNpCRy5CcBcGLWTf1xHyzGl/p/1T7oOWiStsyEdsmRhY8UfDEIaCUmD7iZx/edit" target="_blank">CSUF Baja SAE Project</a>`;
+
+projectSection.appendChild(project1);
+
+let project2 = document.createElement("li");
+project2.innerHTML = `<a href="https://sites.google.com/d/1m6Mm_tC_qsNpCRy5CcBcGLWTf1xHyzGl/p/1I5AiqG8FVN_97u_uP0H7lajkbwb1LwVB/edit" target="_blank">Other Mechanical Engineering Projects</a>`;
+
+projectSection.appendChild(project2);
+
+
 // GitHub Projects
 
-fetch("https://api.github.com/users/deniseduardo12n-arch/repos")
+ fetch("https://api.github.com/users/deniseduardo12n-arch/repos")
 
 .then(response => response.json())
 
 .then(data => {
 
-let repositories = data;
-
-let projectSection = document.getElementById("projects");
-
-let projectList = projectSection.querySelector("ul");
-
-projectList.innerHTML = "";
-
-for (let i = 0; i < repositories.length; i++) {
+data.forEach(function(repo){
 
 let project = document.createElement("li");
 
 let link = document.createElement("a");
 
-link.href = repositories[i].html_url;
-
-link.innerText = repositories[i].name;
-
+link.href = repo.html_url;
+link.innerText = repo.name;
 link.target = "_blank";
 
 project.appendChild(link);
 
-projectList.appendChild(project);
+projectSection.appendChild(project);
 
-}
+});
 
-})
-
-.catch(error => {
-console.error("Error fetching repositories:", error);
 });
